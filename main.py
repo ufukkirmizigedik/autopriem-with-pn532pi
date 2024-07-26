@@ -10,9 +10,6 @@ from nfc import *
 import json
 
 
-
-
-
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-extensions")
 options.add_argument("--start-maximized")
@@ -20,8 +17,6 @@ options.add_argument("--disable-popup-blocking")
 #options.add_argument("--headless")
 #options.add_argument("--disable_gpu")
 options.add_argument('--disable-notifications')
-
-
 
 root = Tk()
 backr = PhotoImage(file='postat.png')
@@ -51,7 +46,6 @@ def nfc():
         if uid == bytearray(b'\x93\xe3\xb6\t'):
             page4()
             break
-
 
 def page0():
     
@@ -111,18 +105,6 @@ def page0():
     page2label7.place_forget()
     page2entry6.place_forget()
     page1label0.place_forget()
-    
-
-    
-
-
-
-
-
-
-
-    
-
 
 def page1():
     capsl.place_forget()
@@ -253,23 +235,6 @@ def page1():
     harfoooo.place_forget()
     page1label0.place(x=17,y=10)
 
-
-
-
-
-
-
-    
-    
-    
-
-
-
-
-
-
-    
-    
 def page2():
     page1btn.place_forget()
     page1label.place_forget()
@@ -373,13 +338,6 @@ def page2():
     sayii0.place_forget()
     lang.place_forget()
     page1label0.place_forget()
-    
-    
-    
-    
-    
-    
-    
     
 def page3():
     page2label7.place_forget()
@@ -498,8 +456,7 @@ def page3():
     sayii0.place_forget()
     lang.place_forget()
     page1label0.place_forget()
-    
-    
+        
     
 def page4():
     page4label0.place(x=400,y=15)
@@ -606,16 +563,6 @@ def page4():
     sayi9.place(x=895,y=495)
     sayi0.place(x=945,y=495)
     
-    
-    
-
-
-
-
-
-   
-
-
 
 def posilka():
     driver=webdriver.Chrome(options=options)
@@ -1246,18 +1193,6 @@ def poss():
     page4label1.place(x=320,y=250)    
     driver.close()
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 page0label=Label(root,text='Вход в система',font=('arial',20,'bold'),image=backr)
 page0label2 = Label(root,text='Номер телефона или электронная почта:')
 page0label3 = Label(root,text='Пароль:')
@@ -1266,20 +1201,11 @@ page0entry2=Entry(borderwidth=5,width=50)
 page0button1=Button(root,text='Логин',font=('arial',13,'bold'),relief=RAISED,pady=40,padx=40,bg='white',command=page1)
 page0button2 = Button(root,text='у меня есть карта Почты',font=('arial',13,'bold'),relief=RAISED,pady=40,padx=40,bg='white',command=nfc)
 
-
-
-
 page1label0 = Label(root,image=backr)
 page1btn = Button(root,text='Отправить письмо',font=('arial',15,'bold'),pady=60,padx=60,bg='white',relief=RAISED,command=page2)
 page1label = Label(root,text='Прием писем/посылка',font=('arial',30,'bold'),bg='white')
 page1button2 = Button(root,text='Отправить посылку',font=('arial',15,'bold'),pady=60,padx=60,bg='white',command=page3)
 page1button3 = Button(root,text='Назад',font=('arial',15,'bold'),pady=60,padx=80,bg='white',command=page0)
-
-
-
-
-
-
 
 page2label = Label(root,text='Отправить письмо',font=('arial',20,'bold'),image=backr)
 page2label2 = Label(root,text='От кого:')
@@ -1303,12 +1229,6 @@ page2entry6.insert(0,'Город получателя')
 page2button1 = Button(root,text='Назад',padx=60,pady=20,bg='white',command=page1)
 page2button2 = Button(root,text='Отпрвавить',bg='white',padx=50,pady=20,command=pismo)
 
-
-
-
-
-
-
 page3label = Label(root,text='Отправить посылка',font=('arial',20,'bold'),image=backr)
 page3label2 = Label(root,text='От кого:')
 page3entry1= Entry(width=50,borderwidth=5)
@@ -1328,8 +1248,6 @@ page3label6 = Label(root,text='Вес:')
 page3entry5 = Entry(width=50,borderwidth=5)
 page3entry5.insert(0,'Напишите примерный вес')
 
-
-
 page4label0 = Label(root,text='Прием писем/посылок',font=('arial',20,'bold'))
 page4label1 = Label(root,text = 'Кому:')
 page4entry1 = Entry(width = 50,borderwidth=5)
@@ -1348,24 +1266,6 @@ page4button2 = Button(root,text='Назад',relief=RAISED,font=('arial','20','b
 variable = StringVar(root)
 variable.set('Выбирайте пожалуйста что хотите отправить')
 w = OptionMenu(root,variable,"Посылка","Письмо")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 harfq = Button(root,text='й',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('q'),pady=15,padx=15)
 harfw = Button(root,text='ц',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('w'),pady=15,padx=15)
@@ -1413,10 +1313,6 @@ sayi9 = Button(root,text='9',relief=RAISED,font=('arial','20','bold'),command = 
 sayi0 = Button(root,text='0',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('0'),pady=15,padx=17)
 
 
-
-
-
-
 harfqq = Button(root,text='q',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('q'),pady=15,padx=18)
 harfww = Button(root,text='w',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('w'),pady=15,padx=15)
 harfee = Button(root,text='e',relief=RAISED,font=('arial','20','bold'),command = lambda:py.press('e'),pady=15,padx=18)
@@ -1458,15 +1354,7 @@ sayii0 = Button(root,text='0',relief=RAISED,font=('arial','20','bold'),command =
 lang = Button(root,text='Lang',relief=RAISED,font=('arial','20','bold'),command = change_language,pady=15,padx=17)
 capsl = Button(root,text='Caps',relief=RAISED,font=('arial','20','bold'),command = upper_letter,pady=15,padx=17)
 
-
-
-
-
-
-
 page0()
 
 root.mainloop()
-
-
-    
+ 
